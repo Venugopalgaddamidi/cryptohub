@@ -1,0 +1,142 @@
+/* =============================================
+   Animations
+   ============================================= */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 212, 170, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(0, 212, 170, 0.4); }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-3px); }
+  to { transform: translateX(6px); }
+}
+
+/* Page transition */
+.page {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Card hover animations */
+.coin-card,
+.trending-coin,
+.category-card,
+.market-stats__card {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button press */
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--primary:active {
+  transform: scale(0.97) translateY(0);
+}
+
+/* Chart appearance */
+.price-chart {
+  animation: scaleIn 0.4s ease;
+}
+
+/* Dropdown animation */
+.search-bar__dropdown {
+  animation: slideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sidebar slide */
+.sidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Toggle active state */
+.btn--toggle {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Pagination buttons */
+.pagination__btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pagination__btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Table row hover */
+.coin-table tbody tr {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modal */
+.modal {
+  animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Star button animation */
+.star-btn:active {
+  transform: scale(0.85);
+}
+
+.coin-card__star:active {
+  transform: scale(0.85);
+}
+
+/* Navbar logo float */
+.navbar__logo-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow pulse on primary buttons */
+.btn--primary {
+  animation: none;
+}
+
+.btn--primary:hover {
+  animation: none;
+}

@@ -1,0 +1,241 @@
+/* =============================================
+   Responsive Design
+   ============================================= */
+
+/* Large screens */
+@media (min-width: 1401px) {
+  .page {
+    max-width: 1500px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .dashboard__columns {
+    grid-template-columns: 1fr;
+  }
+
+  .market-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar--open {
+    transform: translateX(0);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-bg);
+    z-index: 899;
+  }
+
+  .sidebar__header {
+    display: flex;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .coin-details__skeleton {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coin-details__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small tablet / large phone */
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 16px;
+  }
+
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .navbar__center {
+    margin: 0 10px;
+  }
+
+  .page-title {
+    font-size: 1.35rem;
+  }
+
+  .dashboard__title {
+    font-size: 1.6rem;
+  }
+
+  .dashboard__hero {
+    padding: 20px 22px;
+  }
+
+  .market-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .market-stats__card {
+    padding: 16px;
+  }
+
+  .market-stats__value {
+    font-size: 1.15rem;
+  }
+
+  .trending-coins {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .portfolio-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .coin-details__title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coin-details__name {
+    font-size: 1.5rem;
+  }
+
+  .coin-details__price {
+    font-size: 1.6rem;
+  }
+
+  .coin-details__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .markets__controls {
+    flex-direction: column;
+  }
+
+  .markets__search {
+    min-width: auto;
+  }
+
+  .portfolio-page__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .coin-table-wrap {
+    margin: 0 -16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar__brand {
+    font-size: 1.05rem;
+  }
+
+  .navbar__logo-icon {
+    font-size: 1.2rem;
+  }
+
+  .search-bar__input {
+    font-size: 0.85rem;
+    padding: 8px 34px 8px 36px;
+  }
+
+  .market-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .market-stats__card {
+    padding: 14px;
+  }
+
+  .market-stats__label {
+    font-size: 0.72rem;
+  }
+
+  .market-stats__value {
+    font-size: 1rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .top-list__item {
+    padding: 10px 12px;
+  }
+
+  .modal {
+    padding: 22px;
+    margin: 10px;
+  }
+
+  .footer {
+    padding: 28px 16px;
+  }
+
+  .footer__links {
+    gap: 12px;
+  }
+
+  .footer__links a {
+    font-size: 0.8rem;
+  }
+
+  .price-chart__controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .price-chart__tabs,
+  .price-chart__types {
+    justify-content: center;
+  }
+
+  .dashboard__hero {
+    padding: 18px 18px;
+  }
+
+  .dashboard__title {
+    font-size: 1.4rem;
+  }
+
+  .dashboard__subtitle {
+    font-size: 0.9rem;
+  }
+}
